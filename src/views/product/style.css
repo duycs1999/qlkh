@@ -1,0 +1,4 @@
+.auto-width {
+  width: auto; /* Width will adjust based on content */
+  display: inline-block; /* Ensures the element only takes as much width as needed */
+}
