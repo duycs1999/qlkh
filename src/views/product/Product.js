@@ -1,9 +1,9 @@
 import React from 'react'
 
 import {
-  CAvatar,
-  CCard,
-  CCol,
+  CAvatar, CButton,
+  CCard, CCardHeader,
+  CCol, CFormCheck, CFormInput, CInputGroup, CInputGroupText,
   CProgress,
   CRow,
   CTable,
@@ -27,7 +27,8 @@ import {
   cifIn,
   cifPl,
   cifUs,
-  cilPeople,
+  cilCheck, cilMagnifyingGlass,
+  cilPen
 } from '@coreui/icons'
 
 import avatar1 from 'src/assets/images/avatars/1.jpg'
@@ -134,28 +135,39 @@ const Product = () => {
       <CRow>
         <CCol xs>
           <CCard className="mb-4">
+            <CCardHeader>
+              <CRow>
+                <CInputGroup className="input-prepend">
+                  <CInputGroupText>
+                    <CIcon icon={cilMagnifyingGlass} />
+                  </CInputGroupText>
+                  <CFormInput type="text"/>
+                </CInputGroup>
+              </CRow>
+            </CCardHeader>
               <CTable align="middle" className="mb-0 border" hover responsive>
                 <CTableHead className="text-nowrap">
                   <CTableRow>
                     <CTableHeaderCell className="bg-body-tertiary text-center">
-                      <CIcon icon={cilPeople} />
+                      <CIcon icon={cilCheck} />
                     </CTableHeaderCell>
-                    <CTableHeaderCell className="bg-body-tertiary">User</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">Sản phẩm</CTableHeaderCell>
                     <CTableHeaderCell className="bg-body-tertiary text-center">
-                      Country
+                      Còn lại
                     </CTableHeaderCell>
-                    <CTableHeaderCell className="bg-body-tertiary">Usage</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">Vị trí</CTableHeaderCell>
                     <CTableHeaderCell className="bg-body-tertiary text-center">
-                      Payment Method
+                      Ngày thêm
                     </CTableHeaderCell>
-                    <CTableHeaderCell className="bg-body-tertiary">Activity</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">Ngày cập nhật</CTableHeaderCell>
+                    <CTableHeaderCell className="bg-body-tertiary">Chỉnh sửa</CTableHeaderCell>
                   </CTableRow>
                 </CTableHead>
                 <CTableBody>
                   {data.map((item, index) => (
                     <CTableRow v-for="item in tableItems" key={index}>
                       <CTableDataCell className="text-center">
-                        <CAvatar size="md" src={item.avatar.src} status={item.avatar.status} />
+                        <CFormCheck id="flexCheckDefault"/>
                       </CTableDataCell>
                       <CTableDataCell>
                         <div>{item.user.name}</div>
@@ -182,6 +194,9 @@ const Product = () => {
                       <CTableDataCell>
                         <div className="small text-body-secondary text-nowrap">Last login</div>
                         <div className="fw-semibold text-nowrap">{item.activity}</div>
+                      </CTableDataCell>
+                      <CTableDataCell className="text-center">
+                        <CIcon icon={cilPen} />
                       </CTableDataCell>
                     </CTableRow>
                   ))}

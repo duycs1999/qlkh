@@ -18,7 +18,7 @@ const ExampleToast = () => {
   const [toast, addToast] = useState(0)
   const toaster = useRef()
   const exampleToast = (
-    <CToast title="CoreUI for React.js">
+    <CToast title="QLKH">
       <CToastHeader closeButton>
         <svg
           className="rounded me-2"
@@ -31,7 +31,7 @@ const ExampleToast = () => {
         >
           <rect width="100%" height="100%" fill="#007aff"></rect>
         </svg>
-        <strong className="me-auto">CoreUI for React.js</strong>
+        <strong className="me-auto">QLKH</strong>
         <small>7 min ago</small>
       </CToastHeader>
       <CToastBody>Hello, world! This is a toast message.</CToastBody>
@@ -75,7 +75,7 @@ const Toasts = () => {
                   >
                     <rect width="100%" height="100%" fill="#007aff"></rect>
                   </svg>
-                  <strong className="me-auto">CoreUI for React.js</strong>
+                  <strong className="me-auto">QLKH</strong>
                   <small>7 min ago</small>
                 </CToastHeader>
                 <CToastBody>Hello, world! This is a toast message.</CToastBody>
@@ -108,7 +108,7 @@ const Toasts = () => {
                   >
                     <rect width="100%" height="100%" fill="#007aff"></rect>
                   </svg>
-                  <strong className="me-auto">CoreUI for React.js</strong>
+                  <strong className="me-auto">QLKH</strong>
                   <small>7 min ago</small>
                 </CToastHeader>
                 <CToastBody>Hello, world! This is a toast message.</CToastBody>
@@ -142,7 +142,7 @@ const Toasts = () => {
                     >
                       <rect width="100%" height="100%" fill="#007aff"></rect>
                     </svg>
-                    <strong className="me-auto">CoreUI for React.js</strong>
+                    <strong className="me-auto">QLKH</strong>
                     <small>7 min ago</small>
                   </CToastHeader>
                   <CToastBody>Hello, world! This is a toast message.</CToastBody>
@@ -160,7 +160,7 @@ const Toasts = () => {
                     >
                       <rect width="100%" height="100%" fill="#007aff"></rect>
                     </svg>
-                    <strong className="me-auto">CoreUI for React.js</strong>
+                    <strong className="me-auto">QLKH</strong>
                     <small>7 min ago</small>
                   </CToastHeader>
                   <CToastBody>Hello, world! This is a toast message.</CToastBody>
